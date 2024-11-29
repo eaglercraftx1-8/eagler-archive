@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eaglercraft Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Eaglercraft Archive</h1>
+    <h2>Archive Versions</h2>
+
+    <div class="folder" onclick="toggleFolder('folder1', this)">
+        <img src="icons/folder-closed.png" alt="Folder Icon" class="folder-icon">
+        <span>Eaglercraft 1.8</span>
+    </div>
+    <div id="folder1" class="folder-items">
+        <div><a href="" download></a></div>
+    </div>
+
+    <div class="folder" onclick="toggleFolder('folder2', this)">
+        <img src="icons/folder-closed.png" alt="Folder Icon" class="folder-icon">
+        <span>Eaglercraft b1.3</span>
+    </div>
+    <div id="folder2" class="folder-items">
+        <div><a href="" download></a></div>
+    </div>
+
+    <div class="folder" onclick="toggleFolder('folder3', this)">
+        <img src="icons/folder-closed.png" alt="Folder Icon" class="folder-icon">
+        <span>Eaglercraft 1.5</span>
+    </div>
+    <div id="folder3" class="folder-items">
+        <div><a href="" download></a></div>
+    </div>
+
+    <script>
+        function toggleFolder(id, folderElement) {
+            const folder = document.getElementById(id);
+            const icon = folderElement.querySelector('.folder-icon');
+
+            folder.classList.toggle('open');
+
+            if (folder.classList.contains('open')) {
+                icon.src = "icons/folder-open.png";
+            } else {
+                icon.src = "icons/folder-closed.png";
+            }
+        }
+    </script>
+</body>
+</html>
